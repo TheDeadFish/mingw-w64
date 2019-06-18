@@ -176,7 +176,7 @@ int WinMainCRTStartup (void)
     "\t.seh_handlerdata\n"
     "\t.long 1\n"
     "\t.rva .l_startw, .l_endw, _gnu_exception_handler ,.l_endw\n"
-    "\t.text"
+    ".section .text$WinMainCRTStartup"
     );
 #endif
   mingw_app_type = 1;
@@ -204,7 +204,7 @@ int mainCRTStartup (void)
     "\t.seh_handlerdata\n"
     "\t.long 1\n"
     "\t.rva .l_start, .l_end, _gnu_exception_handler ,.l_end\n"
-    "\t.text"
+    ".section .text$mainCRTStartup"
     );
 #endif
   mingw_app_type = 0;
